@@ -138,7 +138,6 @@ class Sheet {
         $sheet->mergeCells("B5:B8")->setCellValue("B5", "vārds, uzvārds, amats")
             ->getStyle("B5:B8")->getAlignment()->setVertical('center')->setWrapText(true);
 
-        //print days of month
         $this->generateDateCells($year, $month, $spreadsheet);
 
         $sheet->mergeCells("AH5:AH8")->setCellValue("AH5", "stundu skaits mēneša normālajā dien.pienākumu izpildes (darba) laikā")
@@ -206,7 +205,7 @@ class Sheet {
 
         $this->generatePersonCells($spreadsheet, $persons);
 
-        //Style whole table:
+        //Style table part without persons:
         $sheet->getColumnDimension("B")->setWidth(125, 'px');
         $sheet->getStyle("A5:BB8")->getBorders()->getAllBorders()->setBorderStyle(Border::BORDER_THIN)->setColor(new Color('#000000'));
         $sheet->getStyle("A5:BB8")->getAlignment()->setHorizontal('center');
