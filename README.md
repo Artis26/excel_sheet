@@ -9,3 +9,6 @@ OR
 
 You can just type in terminal `php public/short.php` and find `demo.xlsx` file in public directory. <br>
 By changing year and month you will change what year and month is generated.
+
+Screenshot:
+![ScreenShot](public/demo_screen.PNG)
